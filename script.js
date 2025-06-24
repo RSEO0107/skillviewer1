@@ -680,8 +680,8 @@ const skillTableConfig = {
             iconId: 222,
             rows: [
                 { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100 },
-				{ label: "불 데미지", baseIndex: 143, perLevelIndex: 144, rangeWidthIndex: 145, valueType: "rangeText", scale: 100, csv: 2, color: "#3a577a" },
-				{ label: "불 데미지", baseIndex: 143, perLevelIndex: 144, rangeWidthIndex: 145, valueType: "rangeText", scale: 100, color: "#502828" },
+				{ label: "기존 불 데미지", baseIndex: 143, perLevelIndex: 144, rangeWidthIndex: 145, valueType: "rangeText", scale: 100, csv: 2, color: "#3a577a" },
+				{ label: "변경 불 데미지", baseIndex: 143, perLevelIndex: 144, rangeWidthIndex: 145, valueType: "rangeText", scale: 100, color: "#502828" },
                 { label: "기존 타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m", csv: 2, color: "#3a577a" },
                 { label: "변경 타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m", color: "#502828" },
                 { label: "기존 비고", text: "5초동안 0.5초간격으로 1회 타격", valueType: "text",color: "#3a577a" },
@@ -695,8 +695,8 @@ const skillTableConfig = {
             rows: [
                 { label: "기존 소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100, csv: 2, color: "#3a577a" },
                 { label: "변경 소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100, color: "#502828" },
-				{ label: "물 데미지", baseIndex: 150, perLevelIndex: 151, rangeWidthIndex: 152, valueType: "rangeText", scale: 100, csv: 2, color: "#3a577a" },
-				{ label: "물 데미지", baseIndex: 150, perLevelIndex: 151, rangeWidthIndex: 152, valueType: "rangeText", scale: 100, color: "#502828" },
+				{ label: "기존 물 데미지", baseIndex: 150, perLevelIndex: 151, rangeWidthIndex: 152, valueType: "rangeText", scale: 100, csv: 2, color: "#3a577a" },
+				{ label: "변경 물 데미지", baseIndex: 150, perLevelIndex: 151, rangeWidthIndex: 152, valueType: "rangeText", scale: 100, color: "#502828" },
                 { label: "기존 타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m", csv: 2, color: "#3a577a" },
                 { label: "변경 타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m", color: "#502828" },
                 { label: "기존 비고", text: "5초동안 0.5초간격으로 1회 타격", valueType: "text",color: "#3a577a" },
