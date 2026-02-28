@@ -29,13 +29,15 @@ const skillTableConfig = {
             skillIndex: 14,
             displayName: "트월링 프로텍트",
             iconId: 15,
+			isNew: true,
             rows: [
                 { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100 },
                 { label: "획득 CP", baseIndex: 21, perLevelIndex: 22, scale: 100 },
                 { label: "사정거리", baseIndex: 419, scale: 100, format: "range" },
                 { label: "바람 데미지", baseIndex: 157, perLevelIndex: 158, rangeWidthIndex2: 160, valueType: "rangeText2", scale: 100 },
                 { label: "타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m" },
-                { label: "타격 횟수", baseIndex: 219, perLevelIndex: 220, scale: 100, maxIndex: 221 }
+				{ label: "기존 타격 횟수", baseIndex: 219, perLevelIndex: 220, scale: 100, maxIndex: 221, csv: 2, color: "#3a577a" },
+				{ label: "변경 타격 횟수", baseIndex: 219, perLevelIndex: 220, scale: 100, maxIndex: 221, color: "#502828" },
             ]
         },
         {
@@ -54,12 +56,14 @@ const skillTableConfig = {
             skillIndex: 19,
             displayName: "워 크라이",
             iconId: 20,
+			isNew: true,
             rows: [
                 { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100 },
                 { label: "획득 CP", baseIndex: 21, perLevelIndex: 22, scale: 100 },
                 { label: "바람 데미지", baseIndex: 157, perLevelIndex: 158, rangeWidthIndex2: 160, valueType: "rangeText2", scale: 100 },
                 { label: "타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m" },
-                { label: "타격 횟수", baseIndex: 219, perLevelIndex: 220, scale: 100, maxIndex: 221 }
+				{ label: "기존 타격 횟수", baseIndex: 219, perLevelIndex: 220, scale: 100, maxIndex: 221, csv: 2, color: "#3a577a" },
+				{ label: "변경 타격 횟수", baseIndex: 219, perLevelIndex: 220, scale: 100, maxIndex: 221, color: "#502828" },
             ]
         },
 		{
@@ -81,10 +85,8 @@ const skillTableConfig = {
             displayName: "브로드 블레이드",
             iconId: 28,
             rows: [
-                { label: "기존 소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100, csv: 2, color: "#3a577a" },
-                { label: "변경 소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100, color: "#502828" },
-                { label: "기존 획득 CP", baseIndex: 21, perLevelIndex: 22, scale: 100, csv: 2, color: "#3a577a" },
-                { label: "변경 획득 CP", baseIndex: 21, perLevelIndex: 22, scale: 100, color: "#502828" },
+                { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100 },
+                { label: "획득 CP", baseIndex: 21, perLevelIndex: 22, scale: 100 },
                 { label: "데미지", baseIndex: 137, perLevelIndex: 138, scale: 100, unit: "%" },
                 { label: "타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m" },
                 { label: "타격 횟수", baseIndex: 197, perLevelIndex: 198, scale: 100, maxIndex: 199, offset: 1 }
@@ -151,7 +153,7 @@ const skillTableConfig = {
                 { label: "필요 CP", baseIndex: 19, perLevelIndex: 20, scale: 100 },
 				{ label: "바람 데미지", baseIndex: 157, perLevelIndex: 158, rangeWidthIndex: 160, valueType: "rangeText", scale: 100 },
 				{ label: "빛 데미지", baseIndex: 171, perLevelIndex: 172, rangeWidthIndex2: 174, valueType: "rangeText2", scale: 100, },
-                { label: "타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m", color: "#502828" },
+                { label: "타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m" },
                 { label: "타격 횟수", text: "초당 1회", valueType: "text" },
                 { label: "비고", text: "온/오프 스킬", valueType: "text" },
            ]
@@ -270,7 +272,7 @@ const skillTableConfig = {
                 { label: "타격 횟수", baseIndex: 197, perLevelIndex: 198, scale: 100, maxIndex: 199, offset: 1 }
            ]
         },
-        {
+		        {
             skillIndex: 87,
             displayName: "버닝 오브",
             iconId: 88,
@@ -281,6 +283,20 @@ const skillTableConfig = {
                 { label: "사정거리", baseIndex: 419, scale: 100, unit: "m" },
                 { label: "타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m" },
                 { label: "불 타격 횟수", baseIndex: 197, perLevelIndex: 198, scale: 100, maxIndex: 199, offset: 1 }
+           ]
+				},
+        {
+            skillIndex: 88,
+            displayName: "바운싱 리니어",
+            iconId: 89,
+			isNew: true,
+            rows: [
+                { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100, color: "#502828" },
+                { label: "획득 CP", baseIndex: 21, perLevelIndex: 22, scale: 100, color: "#502828" },
+                { label: "데미지", baseIndex: 137, perLevelIndex: 138, scale: 100, unit: "%", color: "#502828" },
+                { label: "바운싱 거리", baseIndex: 419, scale: 100, unit: "m", color: "#502828" },
+                { label: "타격 횟수", baseIndex: 495, perLevelIndex: 496, scale: 100, maxIndex: 494, maxScale: false , color: "#502828" },
+                { label: "추가 타격 횟수", baseIndex: 197, perLevelIndex: 198, scale: 100, maxIndex: 199, offset: 1, color: "#502828" }
            ]
         },
         {
@@ -565,6 +581,19 @@ const skillTableConfig = {
         },
     ],
     7: [
+	        {
+            skillIndex: 179,
+            displayName: "연타",
+            iconId: 180,
+			isNew: true,
+            rows: [
+                { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100, color: "#502828" },
+                { label: "획득 CP", baseIndex: 21, perLevelIndex: 22, scale: 100, color: "#502828" },
+                { label: "데미지", baseIndex: 137, perLevelIndex: 138, scale: 100, unit: "%", color: "#502828" },
+                { label: "타격 횟수", baseIndex: 263, perLevelIndex: 264, scale: 100, maxIndex: 265, offset: 1, color: "#502828" },
+                { label: "스킬 레벨 상승", text: "오른발 스킬 레벨 2 상승 (3초)", valueType: "text", color: "#502828" }
+           ]
+        },
         {
             skillIndex: 183,
             displayName: "힘껏찍기",
@@ -615,7 +644,7 @@ const skillTableConfig = {
                 { label: "데미지", baseIndex: 137, perLevelIndex: 138, scale: 100, unit: "%" },            
                 { label: "타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m" },
                 { label: "사정거리", baseIndex: 426, scale: 100, format: "range" },        
-                { label: "물리 타격 횟수", baseIndex: 241, perLevelIndex: 242, scale: 100, maxIndex: 243, offset: 1 },
+                { label: "물리 타격 횟수", baseIndex: 219, perLevelIndex: 220, scale: 100, maxIndex: 221, offset: 1 },
                 { label: "스킬 레벨 상승", text: "오른손 스킬 레벨 4 상승 (2초)", valueType: "text" }
            ]
         },
@@ -634,6 +663,22 @@ const skillTableConfig = {
         },
     ],
    8: [
+		{
+            skillIndex: 240,
+            displayName: "멀티플 트위스터",
+            iconId: 241,
+			isNew: true,
+            rows: [
+                { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100, color: "#502828" },
+                { label: "데미지", baseIndex: 137, perLevelIndex: 138, scale: 100, unit: "%", color: "#502828" },
+                { label: "분신 갯수", baseIndex: 491, perLevelIndex: 492, maxIndex: 493, scale: 100, maxScale: 100, offset: 1, color: "#502828" },
+                { label: "타격 횟수", baseIndex: 219, perLevelIndex: 220, scale: 100, maxIndex: 221, combineWith: { baseIndex: 241, perLevelIndex: 242, scale: 100, maxIndex: 243 }, combineBaseIndex: 241, offset: 1, color: "#502828" },
+                { label: "넉백 거리", baseIndex: 410, unit: "m", color: "#502828" },
+                { label: "최대 사정거리", baseIndex: 419, scale: 100, unit: "m", color: "#502828" },
+                { label: "타격 범위", baseIndex: 426, scale: 100, format: "range", color: "#502828" },
+				{ label: "비고", text: "상대 블럭 무시", valueType: "text", color: "#502828" }
+           ]
+        },
         {
             skillIndex: 243,
             displayName: "파이어 & 아이스",
@@ -682,10 +727,8 @@ const skillTableConfig = {
                 { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100 },
 				{ label: "기존 불 데미지", baseIndex: 143, perLevelIndex: 144, rangeWidthIndex: 145, valueType: "rangeText", scale: 100, csv: 2, color: "#3a577a" },
 				{ label: "변경 불 데미지", baseIndex: 143, perLevelIndex: 144, rangeWidthIndex: 145, valueType: "rangeText", scale: 100, color: "#502828" },
-                { label: "기존 타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m", csv: 2, color: "#3a577a" },
-                { label: "변경 타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m", color: "#502828" },
-                { label: "기존 비고", text: "5초동안 0.5초간격으로 1회 타격", valueType: "text",color: "#3a577a" },
-				{ label: "변경 비고", text: "2.5초동안 0.25초간격으로 1회 타격", valueType: "text", color: "#502828"  }
+                { label: "타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m" },
+				{ label: "비고", text: "2.5초동안 0.25초간격으로 1회 타격", valueType: "text" }
             ]
         },
 		{
@@ -693,14 +736,11 @@ const skillTableConfig = {
             displayName: "워터폴",
             iconId: 223,
             rows: [
-                { label: "기존 소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100, csv: 2, color: "#3a577a" },
-                { label: "변경 소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100, color: "#502828" },
+                { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100 },
 				{ label: "기존 물 데미지", baseIndex: 150, perLevelIndex: 151, rangeWidthIndex: 152, valueType: "rangeText", scale: 100, csv: 2, color: "#3a577a" },
 				{ label: "변경 물 데미지", baseIndex: 150, perLevelIndex: 151, rangeWidthIndex: 152, valueType: "rangeText", scale: 100, color: "#502828" },
-                { label: "기존 타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m", csv: 2, color: "#3a577a" },
-                { label: "변경 타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m", color: "#502828" },
-                { label: "기존 비고", text: "5초동안 0.5초간격으로 1회 타격", valueType: "text",color: "#3a577a" },
-				{ label: "변경 비고", text: "4초동안 0.4초간격으로 1회 타격", valueType: "text", color: "#502828" }
+                { label: "변경 타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m" },
+				{ label: "비고", text: "4초동안 0.4초간격으로 1회 타격", valueType: "text" }
             ]
         },
 				{
@@ -832,7 +872,8 @@ const skillTableConfig = {
             iconId: 282,
             rows: [
                 { label: "필요 CP", baseIndex: 19, perLevelIndex: 20, scale: 100 },
-                { label: "불 데미지", baseIndex: 143, perLevelIndex: 144, rangeWidthIndex: 145, valueType: "rangeText", scale: 100 },
+				{ label: "기존 불 데미지", baseIndex: 143, perLevelIndex: 144, rangeWidthIndex: 145, valueType: "rangeText", scale: 100, combineWith: { baseIndex: 193, perLevelIndex: 194, rangeWidthIndex: 195, scale: 100 }, csv: 2, color: "#3a577a" },
+				{ label: "변경 불 데미지", baseIndex: 143, perLevelIndex: 144, rangeWidthIndex: 145, valueType: "rangeText", scale: 100, combineWith: { baseIndex: 193, perLevelIndex: 194, rangeWidthIndex: 195, scale: 100 }, color: "#502828" },
                 { label: "효과 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m" },
                 { label: "비고", text: "1초당 3회 발동", valueType: "text" },
                 { label: "비고", text: "온/오프 스킬", valueType: "text" }
@@ -907,6 +948,22 @@ const skillTableConfig = {
                 { label: "타격 횟수", baseIndex: 329, perLevelIndex: 330, scale: 100, maxIndex: 331, combineWith: { baseIndex: 351, perLevelIndex: 352, scale: 100, maxIndex: 353 }, offset: 1 }
            ]
         },
+		{
+            skillIndex: 347,
+            displayName: "라이트닝 와인더",
+            iconId: 348,
+			isNew: true,
+            rows: [
+                { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100 },
+                { label: "획득 CP", baseIndex: 21, perLevelIndex: 22, scale: 100 },
+                { label: "기존 빛 데미지", baseIndex: 171, perLevelIndex: 172, rangeWidthIndex2: 174, valueType: "rangeText2", scale: 100, csv: 2, color: "#3a577a" },
+				{ label: "변경 빛 데미지", baseIndex: 171, perLevelIndex: 172, rangeWidthIndex2: 174, valueType: "rangeText2", scale: 100, color: "#502828" },
+                { label: "타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m" },
+                { label: "타격 횟수", baseIndex: 495, perLevelIndex: 496, scale: 100, maxIndex: 494, maxScale: false },
+				{ label: "비고", text: "한 대상당 최대 4회 공격", valueType: "text" },
+                { label: "비고", text: "강제 변신 해제 제거", valueType: "text" },
+           ]
+        },
         {
             skillIndex: 348,
             displayName: "플로렌스 스페셜",
@@ -914,7 +971,8 @@ const skillTableConfig = {
             rows: [
                 { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100 },
                 { label: "획득 CP", baseIndex: 21, perLevelIndex: 22, scale: 100 },
-                { label: "빛 데미지", baseIndex: 171, perLevelIndex: 172, scale: 100 },
+                { label: "기존 빛 데미지", baseIndex: 171, perLevelIndex: 172, rangeWidthIndex2: 174, valueType: "rangeText2", scale: 100, csv: 2, color: "#3a577a" },
+				{ label: "변경 빛 데미지", baseIndex: 171, perLevelIndex: 172, rangeWidthIndex2: 174, valueType: "rangeText2", scale: 100, color: "#502828" },
                 { label: "타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m" },
                 { label: "타격 횟수", baseIndex: 495, perLevelIndex: 496, scale: 100, maxIndex: 494, maxScale: false },
                 { label: "비고", text: "유혹, 혼란 확률 제거", valueType: "text" },
@@ -963,6 +1021,40 @@ const skillTableConfig = {
            ]
         },
     ],
+    15: [
+        {
+            skillIndex: 379,
+            displayName: "바인드 블레이즈",
+            iconId: 380,
+			isNew: true,
+            rows: [
+                { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100, color: "#502828" },
+                { label: "획득 CP", baseIndex: 21, perLevelIndex: 22, scale: 100, color: "#502828" },
+                { label: "불 데미지", baseIndex: 193, perLevelIndex: 194, rangeWidthIndex: 195, valueType: "rangeText", scale: 100, color: "#502828" },
+                { label: "타격 범위", baseIndex: 191, perLevelIndex: 192, scale: 10000, unit: "m", color: "#502828" },
+				{ label: "불 타격 횟수", baseIndex: 197, perLevelIndex: 198, scale: 100, maxIndex: 199, color: "#502828" },
+                { label: "비고", text: "자기 중심으로 스킬 발동", valueType: "text", color: "#502828" },
+           ]
+        },
+		{
+            skillIndex: 389,
+            displayName: "모탈 클라우드",
+            iconId: 390,
+			isNew: true,
+            rows: [
+                { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100, color: "#502828" },
+                { label: "획득 CP", baseIndex: 21, perLevelIndex: 22, scale: 100, color: "#502828" },
+                { label: "대지 데미지", baseIndex: 164, perLevelIndex: 165, rangeWidthIndex2: 166, valueType: "rangeText2", scale: 100, color: "#502828" },
+                { label: "구름 지속시간", baseIndex: 191, scale: 100, unit: "초", color: "#502828" },
+				{ label: "독 지속시간", baseIndex: 213, scale: 100, unit: "초", color: "#502828" },
+				{ label: "한계 시간", baseIndex: 191, perLevelIndex: 192, maxIndex: 193, scale: 100, unit: "초", color: "#502828" },
+				{ label: "즉사 확률", baseIndex: 195, perLevelIndex: 196, maxIndex: 197, scale: 100, unit: "%", color: "#502828" },
+                { label: "타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m", color: "#502828" },
+				{ label: "끌어당김 범위", baseIndex: 255, perLevelIndex: 256, scale: 10000, unit: "m", color: "#502828" },
+                { label: "비고", text: "자기 중심으로 스킬 발동", valueType: "text", color: "#502828" },
+           ]
+        },
+    ],
     16: [
         {
             skillIndex: 402,
@@ -995,14 +1087,21 @@ const skillTableConfig = {
             skillIndex: 404,
             displayName: "대회전",
             iconId: 405,
+			isNew: true,
             rows: [
                 { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100 },
                 { label: "획득 CP", baseIndex: 21, perLevelIndex: 22, scale: 100 },
-                { label: "데미지", baseIndex: 137, perLevelIndex: 138, scale: 100, unit: "%" },
+				{ label: "데미지", baseIndex: 137, perLevelIndex: 138, scale: 100, unit: "%" },
+                { label: "추가 물리 데미지", baseIndex: 215, perLevelIndex: 216, rangeWidthIndex2: 217, valueType: "rangeText2", scale: 100, color: "#502828" },
+				{ label: "추가 물리 타격 횟수", baseIndex: 219, perLevelIndex: 220, scale: 100, maxIndex: 221, color: "#502828" },
+				{ label: "추가 바람 데미지", baseIndex: 237, perLevelIndex: 238, rangeWidthIndex2: 239, valueType: "rangeText2", scale: 100, color: "#502828" },
+				{ label: "추가 바람 타격 횟수", baseIndex: 241, perLevelIndex: 242, scale: 100, maxIndex: 243, color: "#502828" },
+				{ label: "타격 횟수", baseIndex: 521, scale: 100, format: "perSecond" },
                 { label: "타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m" },
                 { label: "지속시간", baseIndex: 502, scale: 100, unit: "초" },
-                { label: "타격 횟수", baseIndex: 521, scale: 100, format: "perSecond" },
+				{ label: "끌어당김 범위", baseIndex: 255, perLevelIndex: 256, scale: 10000, unit: "m", color: "#502828" },
                 { label: "비고", text: "쿨타임 제거", valueType: "text" },
+				{ label: "비고", text: "지속시간 동안 이동 불가", valueType: "text", color: "#502828" },
            ]
         },
         {
@@ -1109,10 +1208,8 @@ const skillTableConfig = {
             rows: [
                 { label: "소모 CP", baseIndex: 19, perLevelIndex: 20, scale: 100 },
                 { label: "획득 CP", baseIndex: 21, perLevelIndex: 22, scale: 100 },
-                { label: "기존 빛 데미지", baseIndex: 171, perLevelIndex: 172, rangeWidthIndex2: 174, valueType: "rangeText2", scale: 100, csv: 2, color: "#3a577a" },
-				{ label: "변경 빛 데미지", baseIndex: 171, perLevelIndex: 172, scale: 100, color: "#502828" },
-                { label: "기존 타격 횟수", baseIndex: 197, perLevelIndex: 198, scale: 100, maxIndex: 199, offset: 1, csv: 2, color: "#3a577a" },
-				{ label: "변경 타격 횟수", baseIndex: 197, perLevelIndex: 198, scale: 100, maxIndex: 199, offset: 1, color: "#502828" },
+				{ label: "빛 데미지", baseIndex: 171, perLevelIndex: 172, scale: 100 },
+				{ label: "타격 횟수", baseIndex: 197, perLevelIndex: 198, scale: 100, maxIndex: 199, offset: 1 },
                 { label: "타격 범위", baseIndex: 424, perLevelIndex: 425, scale: 10000, unit: "m" },
            ]
         },
@@ -1159,10 +1256,8 @@ const skillTableConfig = {
             iconId: 472,
             rows: [
 			    { label: "추가 필요 CP", baseIndex: 19, perLevelIndex: 20, scale: 100 },
-                { label: "기존 최소 데미지 보정", baseIndex: 555, perLevelIndex: 556, maxIndex:557, scale: 100, unit: "%", csv: 2, color: "#3a577a" },
-				{ label: "변경 빛 속성 강화", baseIndex: 193, perLevelIndex: 194, maxIndex:195, scale: 100, unit: "%", color: "#502828" },
-				{ label: "기존 비고", text: "", valueType: "text", color: "#3a577a" },
-				{ label: "변경 비고", text: "온/오프 스킬", valueType: "text", color: "#502828" },
+				{ label: "빛 속성 강화", baseIndex: 193, perLevelIndex: 194, maxIndex:195, scale: 100, unit: "%" },
+				{ label: "비고", text: "온/오프 스킬", valueType: "text" },
            ]
         },
     ]
@@ -1217,14 +1312,25 @@ function parseSigned16bit(value) {
 }
 
 function generateValues(base, perLevel, scale, max = null) {
-    const b = parseFloat(base) || 0;
-    const p = parseFloat(perLevel) || 0;
-    const s = parseFloat(scale) || 1;
-    return levelSteps.map(lv => {
-        let value = (b + p * lv) / s;
-        if (max !== null && value > max) value = max;
-        return Number(value.toFixed(2)).toString();
-    });
+  const b = parseFloat(base) || 0;
+  const p = parseFloat(perLevel) || 0;
+  const s = parseFloat(scale) || 1;
+
+  return levelSteps.map(lv => {
+    let value = (b + p * lv) / s;
+
+    if (max !== null) {
+      if (p < 0) {
+        // perLevel 음수 → 바닥값
+        if (value < max) value = max;
+      } else {
+        // perLevel 양수 → 상한값
+        if (value > max) value = max;
+      }
+    }
+
+    return Number(value.toFixed(2)).toString();
+  });
 }
 
 function generateSymmetricRangeValuesWithLevel(base, perLevel, rangeWidth) {
@@ -1271,7 +1377,7 @@ function applyFormatting(row, value, baseIndex) {
     return value;
 }
 
-function renderSkillTable(titleName, rows, iconId = null) {
+function renderSkillTable(titleName, rows, iconId = null, isNew = false) {
     const container = document.getElementById("skillTables");
     const table = document.createElement("table");
     const thead = document.createElement("thead");
@@ -1284,9 +1390,13 @@ function renderSkillTable(titleName, rows, iconId = null) {
     titleCell.style.fontSize = "20px";
     titleCell.style.color = "#fff";
     titleCell.style.background = "#111";
+    const newBadge = isNew
+      ? '<span class="new-badge">NEW</span><span class="new-gap"></span>'
+      : '';
+
     titleCell.innerHTML = iconId !== null
-        ? `<img src="icon/iconSkill_${iconId}.png" alt="${titleName}" style="vertical-align:middle; height:32px; margin-right:8px;"> ${titleName}`
-        : titleName;
+      ? `${newBadge}<img src="icon/iconSkill_${iconId}.png" style="vertical-align:middle; height:32px; margin-right:8px;"> ${titleName}`
+      : `${newBadge}${titleName}`;
     titleRow.appendChild(titleCell);
     thead.appendChild(titleRow);
 
@@ -1432,27 +1542,41 @@ function renderByCharactorID(charactorID) {
         }
 
          if (type === "rangeText") {
-             const scale = entry.scale || 1;
-             const base = parseSigned16bit(row[entry.baseIndex]) / scale;
-             const perLevel = parseSigned16bit(row[entry.perLevelIndex]) / scale;
-             const rangeWidth = parseSigned16bit(row[entry.rangeWidthIndex]) / scale;
+           const list = [entry];
+           if (Array.isArray(entry.combineWith)) list.push(...entry.combineWith);
+           else if (entry.combineWith) list.push(entry.combineWith);
 
-                      return {
-                 label,
-                 base,
-                 perLevel,
-                 rangeWidth,
-                 valueType: "rangeText",
-                 baseIndex: entry.baseIndex,
-                 perLevelIndex: entry.perLevelIndex,
-                 rangeWidthIndex: entry.rangeWidthIndex,
-                 format: entry.format,
-                 unit: entry.unit,
-                 suffix: entry.suffix,
-                 offset: entry.offset,
-                 csv: entry.csv,
-				 color: entry.color 
-             };
+           let base = 0, perLevel = 0, rangeWidth = 0;
+
+           list.forEach(e => {
+             const s = e.scale || entry.scale || 1;
+
+             if (typeof e.baseIndex === "number")
+               base += parseSigned16bit(row[e.baseIndex]) / s;
+
+             if (typeof e.perLevelIndex === "number")
+               perLevel += parseSigned16bit(row[e.perLevelIndex]) / s;
+
+             if (typeof e.rangeWidthIndex === "number")
+               rangeWidth += parseSigned16bit(row[e.rangeWidthIndex]) / s;
+           });
+
+           return {
+             label,
+             base,
+             perLevel,
+             rangeWidth,
+             valueType: "rangeText",
+             baseIndex: entry.baseIndex,
+             perLevelIndex: entry.perLevelIndex,
+             rangeWidthIndex: entry.rangeWidthIndex,
+             format: entry.format,
+             unit: entry.unit,
+             suffix: entry.suffix,
+             offset: entry.offset,
+             csv: entry.csv,
+             color: entry.color
+           };
          }
 
          if (type === "rangeText2") {
@@ -1538,7 +1662,7 @@ function renderByCharactorID(charactorID) {
         };
     });
 
-        renderSkillTable(skill.displayName, tableRows, skill.iconId);
+        renderSkillTable(skill.displayName, tableRows, skill.iconId, skill.isNew);
     });
 }
 
